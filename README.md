@@ -1,0 +1,2 @@
+# Freeda
+run ./install.sh

@@ -1,0 +1,475 @@
+.App {
+  text-align: center;
+}
+
+.popular-movies{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+
+.drop-zone {
+  border: 5px dashed #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.drop-zone:hover {
+  border-color: rgb(0, 11, 172);
+  color: #333;
+}
+
+.file-preview {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.file-preview img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.file-preview p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+img{
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+
+button {
+  width: 120px;
+  margin-top: 40px;
+  margin-right: 2rem;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: rgb(65, 98, 168);
+  border-radius: 1rem;
+  border : 2px solid rgb(7, 7, 7);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  width: 120px;
+  margin-top: 40px;
+  margin-right: 2rem;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: rgb(255, 0, 0);
+  border-radius: 1rem;
+  border : 2px solid rgb(7, 7, 7);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.Menu {
+  align-items: center;
+  height: 5rem;
+  align-items: center;
+  margin-bottom: 850px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(209, 209, 209);
+}
+
+.form {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px;
+  color: white;
+  background: rgb(190, 255, 136);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.form-h2 {
+  font-size: 2rem;
+  color: rgb(0, 11, 172);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.input-form{
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  transition: 0.3s all;
+}
+
+.input-volume {
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgb(197, 197, 197);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  transition: 0.3s all;
+}
+
+.input-form:focus {
+  box-shadow: 0 0 0 2px rgb(0, 11, 172);
+}
+
+.input-form::placeholder {
+  color: rgb(0, 11, 172);
+}
+
+.input-form:focus::placeholder {
+  color: rgb(0, 11, 172);
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.admin-container h1 {
+  font-size: 2rem;
+  color: rgb(0, 11, 172);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.admin-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.admin-container li {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  margin: 0 10px;
+}
+
+.admin-container button {
+  background-color: #ff5a5f;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-container button:hover {
+  background-color: #ff4348;
+}
+
+.admin-container img {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.Freeda {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px;
+  color: white;
+  background: rgb(179, 179, 179);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(207, 207, 207, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.Freeda label {
+  font-size: 2rem;
+  color: rgb(0, 11, 172);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Freeda form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Freeda label {
+  margin: 1rem 0 0.5rem;
+}
+
+.Freeda textarea {
+  height: 10rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+  0 1px 1px rgba(128, 128, 128, 0.155),
+  0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+  0 4.4px 4.4px rgba(207, 207, 207, 0.241),
+  0 12px 12px rgba(128, 128, 128, 0.35);
+  border-radius: 10px;
+}
+
+.Freda button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Freeda button:hover {
+  background-color: #0055b7;
+}
+
+.language-select {
+  width: 100%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px 5px;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(207, 207, 207, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.clicked {
+  background-color: rgb(65, 98, 168);
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(65, 98, 168);
+  color: white;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.digit-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.login-container h2 {
+  display: baseline;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-top: 150px;
+}
+
+.login-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.code-container {
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.digit-container button {
+  background-color: transparent;
+  border: none;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 0;
+}
+
+.digit-delete {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.digit-container button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.digit-container button:focus {
+  outline: none;
+}
+
+.digit-container .clear {
+  margin-left: 0;
+}
+
+.digit-container .enter {
+  margin-right: 0;
+}
+
+/* Couleurs de fond pour les différentes notifications */
+.Toastify__toast--success {
+  background-color: #235724;
+}
+.Toastify__toast--error {
+  background-color: #641f1a;
+}
+
+/* Couleurs de texte pour les différentes notifications */
+.Toastify__toast--success .Toastify__toast-body {
+  color: #fff;
+}
+.Toastify__toast--error .Toastify__toast-body {
+  color: #fff;
+}
+
+/* Position de la notification */
+.Toastify__toast--success,
+.Toastify__toast--error {
+  top: 70px;
+  right: 20px;
+}
+
+.soundboard {
+  display: grid;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-left: 50px;
+  max-width: 90%;
+  width: 80%;
+  grid-template-columns: repeat(6, 1fr); /* 8 columns of equal width */
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+
+.img-sound {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+
+.img-sound:hover {
+  filter: grayscale(0%);
+}
+
+.img-sound:hover::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgb(146, 6, 6);
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .soundboard {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width for smaller screens */
+  }
+  
+  .img-sound {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .soundboard {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width for even smaller screens */
+  }
+  
+  .img-sound {
+    width: 100px;
+    height: 100px;
+  }
+}

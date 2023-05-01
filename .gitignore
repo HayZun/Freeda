@@ -8,6 +8,9 @@
 # testing artifacts
 /coverage
 
+# local env files
+.env
+
 # IDE files
 .vscode/
 .idea/

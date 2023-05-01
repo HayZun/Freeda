@@ -20,7 +20,7 @@ services:
       - my-network
       
   frontend:
-    container_name: frontend-front
+    container_name: freeda-frontend
     build:
       context: ./frontend
       args:

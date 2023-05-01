@@ -8,7 +8,7 @@
 # testing artifacts
 /coverage
 
-# local env files
+# local env files like .*env
 .env
 
 # IDE files

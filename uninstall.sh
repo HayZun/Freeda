@@ -5,5 +5,5 @@ docker image prune -f
 docker compose down
 
 #remove image containers backend and frontend
-docker rmi app-backend
-docker rmi app-frontend
+docker rmi freeda-backend
+docker rmi freeda-frontend

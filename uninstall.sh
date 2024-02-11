@@ -2,8 +2,8 @@
 
 # Stop and remove all containers
 docker image prune -f
-docker compose down
+docker-compose down
 
 #remove image containers backend and frontend
-docker rmi freeda-backend
-docker rmi freeda-frontend
+docker rmi freeda_backend
+docker rmi freeda_frontend

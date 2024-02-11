@@ -1,18 +1,42 @@
 #!/bin/bash
 
-# Get the IP address of the host
-ip_address=$(ip addr | awk '/state UP/ {print $2}' | grep -E '^en|^wl' | xargs -I{} sh -c 'ip addr show {} | grep -oP "(?<=inet\s)\d+(\.\d+){3}"')
+
+# Fonction pour afficher le menu et demander à l'utilisateur de choisir une interface
+select_interface() {
+    echo "Veuillez choisir une interface pour la configuration de l'application :"
+    select interface_name in $(ifconfig -s | awk '$1 ~ /^wl|^en/ {print $1}')
+    do
+        if [ -n "$interface_name" ]; then
+            ip_address=$(ifconfig $interface_name 2>/dev/null | grep -m 1 'inet ' | awk '{print $2}')
+            if [ -z "$ip_address" ]; then
+                echo "L'interface $interface_name n'a pas d'adresse IP."
+            else
+                # Vérifier si l'interface est active
+                interface_status=$(cat /sys/class/net/$interface_name/operstate 2>/dev/null)
+                if [ "$interface_status" == "up" ]; then
+                    echo "L'adresse IP pour accéder à l'application est $ip_address."
+                    return
+                else
+                    echo "L'interface $interface_name est désactivée."
+                fi
+            fi
+        else
+            echo "Choix invalide. Veuillez réessayer."
+        fi
+    done
+}
+
+# Appeler la fonction pour sélectionner une interface
+select_interface
 
 # Replace the value of BACKEND_HOST with the IP address
 sed -i "s/BACKEND_HOST=.*/BACKEND_HOST=$ip_address/g" .env
 
 # Start the containers
-docker compose up --build -d
+docker-compose up --build -d
 
 # Stop and remove all containers
 docker image prune -f
-
-clear
 
 #display application name with big characters ASCII art font, the name of application is freeda
 echo """
